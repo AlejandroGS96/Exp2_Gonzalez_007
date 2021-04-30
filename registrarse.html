@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="css/estilos.css" type="text/css" rel="stylesheet">
+        <script src="js/funciones.js"></script>
     </head>
 
     <body >
@@ -60,7 +61,7 @@
 
                                 <div class="form-group">
                                     <label for="fechaNac">Ingresa tu fecha de nacimiento</label>
-                                    <input class="form-control" type="date" id="fechaNac" required>
+                                    <input class="form-control" type="date" id="fechaNac" onblur="Cumple()" required>
                                 </div>
 
                                 <div class="form-group">
