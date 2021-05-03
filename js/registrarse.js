@@ -12,6 +12,51 @@ function Cumple() {
     }
 }
 
+function esRunValido(e) {
+    if(!validaRun(e)) {
+        alert('¡Error! Ingrese un RUN válido');
+        document.getElementById('run').value = "";
+        document.registro.run.focus();
+    }
+}
+
+function validaRun(e) {
+    var nums = [2, 3, 4, 5, 6, 7];
+    var arrayRun = e.value.split("-");
+    var runNormal = arrayRun[0];
+    var digVer = arrayRun[1];
+    var runVolt = "";
+
+
+    for(var i=runNormal.length; i>=0; i--) {
+        runVolt += runNormal.charAt(i);
+    }
+
+    var mult = 0;
+    var cont = 0;
+
+    for(var i=0; i<runVolt.length; i++) {
+        mult += parseInt(runVolt.charAt(i)) * nums[cont];
+        cont += 1;
+        if(cont == 6) cont = 0;
+    }
+
+    var cuo = mult%11;
+    var digVerResult = 11 - cuo;
+
+    var digVerNum = parseInt(digVer);
+
+    if(digVerResult == digVerNum) {
+        return true;
+    }else if(digVerResult == 11 && parseInt(digVer) == 0) {
+        return true;
+    }else if(digVerResult == 10 && (digVer.toLowerCase() == 'k')) {
+        return true;
+    }else {
+        return false;
+    }
+}
+
 function validaRegistrarse() {
     var run = document.getElementById('run').value;
     var nombres = document.getElementById('nombres').value;
