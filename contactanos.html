@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="css/estilos.css" type="text/css" rel="stylesheet">
+        <script src="js/contactanos.js"></script>
     </head>
 
     <body >
@@ -41,35 +42,36 @@
                     <div class="card text-center">
                         <div class="card-body parrafo">
                             
-                            <form method="POST" action="#">
+                            <form method="POST" action="#" name="contact" onsubmit="return validaContactanos()">
                                 
                                 <div class="form-group">
                                     <label for="nombre">Ingresa tu nombre:</label>
-                                    <input class="form-control" type="text" id="nombre" required>
+                                    <input class="form-control" type="text" id="nombre">
                                 </div>
     
                                 <div class="form-group">
                                     <label for="edad">Ingresa tu edad:</label>
-                                    <input class="form-control" type="number" id="edad" required>
+                                    <input class="form-control" type="number" id="edad">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="edad">Selecciona tu nacionalidad:</label>
                                     <select class="form-control" id="nacionalidad">
-                                        <option value="0">Chile</option>
-                                        <option value="1">Argentina</option>
-                                        <option value="2">Perú</option>
-                                        <option value="3">Bolivia</option>
-                                        <option value="4">Brasil</option>
-                                        <option value="5">Ecuador</option>
-                                        <option value="6">Venezuela</option>
-                                        <option value="7">Colombia</option>
+                                        <option value="0">- Seleccione una opción -</option>
+                                        <option value="1">Chile</option>
+                                        <option value="2">Argentina</option>
+                                        <option value="3">Perú</option>
+                                        <option value="4">Bolivia</option>
+                                        <option value="5">Brasil</option>
+                                        <option value="6">Ecuador</option>
+                                        <option value="7">Venezuela</option>
+                                        <option value="8">Colombia</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="fono">Ingresa tu teléfono:</label>
-                                    <input class="form-control" type="text" id="fono" required>
+                                    <input class="form-control" type="text" id="fono">
                                 </div>
 
                                 <div class="form-group">
